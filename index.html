@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment method 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      
+        <h1>Payment</h1>
+        <div class="plans">
+            <label for="checkbox-1">
+                <input type="radio" checked id="radio-1" name="radio">
+                <div class="info">
+                    <h4>Card</h4>
+                    <p>Pay with a card</p>
+                    <div class="data">
+                        <form action="javascript:void(0)" class="cardNo">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /><path d="M3 10l18 0" /><path d="M7 15l.01 0" /><path d="M11 15l2 0" /></svg>
+                            <input type="number"  placeholder="Card number">
+                        </form>
+                        <div class="cardDetails">
+                            <form action="javascript:void(0)" class="cardDate">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5m0 3a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3z" /><path d="M3 10l18 0" /><path d="M7 15l.01 0" /><path d="M11 15l2 0" /></svg>
+                                <input type="number"  placeholder="mm/dd">
+                            </form>
+                            <form action="javascript:void(0)" class="cvc">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-lock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M8 11v-4a4 4 0 1 1 8 0v4" /></svg>
+                                <input type="number"  placeholder="CVC">
+                            </form>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox">
+                            <span>Remember my card</span>
+                        </div>
+                    </div>
+                </div>
+            </label>
+            <label for="checkbox-2">
+                <input type="radio" id="radio-2" name="radio">
+                    <div class="payTime">
+                        <h4>Get first. Pay later.</h4>
+                        <p>Pay within 30 days</p>
+                    </div>
+                
+            </label>
+        </div>
+        <button class="btn">Continue</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

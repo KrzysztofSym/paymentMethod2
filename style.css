@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+/*===== VARIABLES CSS =====*/
+
+:root {
+    --h1-fs: 2rem;
+    --h1-fs-media: 3rem;
+    --h2-fs: 1.5rem;
+    --h2-fs-media: 2rem;
+    --h3-fs: 1.3rem;
+    --h3-fs-media: 1.8rem;
+    --h4-fs: .9rem;
+    --h4-fs-media: 1.5rem;
+    --p-fs: .8rem;
+    --p-fs-media: 1.1rem;
+    --a-fs: .8rem;
+    --a-fs-media: 1.1rem;
+    --li-fs: .8rem;
+    --li-fs-media: 1.1rem;
+
+    --clr-bg-main: #dfe0f2;
+    --clr-bg-pri: #ffeed2;
+    --clr-bg-sec: #f3fafa;
+    --clr-acc-main: #2a327c;
+    --clr-acc-pri: #0d1132;
+    --clr-acc-sec: #2e45ed;
+    --clr-acc-thi: #d80000;
+    --clr-acc-four: #ad0000;
+    --clr-acc-fif: #e03333;
+    --clr-text-main: #67696a;
+    --clr-text-pri: #36454F;
+
+    --shadow-color: #33cbb8;
+    --main-ff: 'Poppins', sans-serif;
+}
+
+/*===== BASE =====*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-ff);
+    font-size: var(--p-fs);
+    background: var(--clr-bg-main);
+    color: var(--clr-text-main);
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4,
+p, a, li {
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--h1-fs);
+}
+
+h2 {
+    font-size: var(--h2-fs);
+}
+
+h3 {
+    font-size: var(--h3-fs);
+}
+
+h4 {
+    font-size: var(--h4-fs);
+    font-weight: bolder;
+    margin-bottom: .6rem;
+}
+
+p, a, li, span {
+    font-size: var(--p-fs);
+    font-weight: 600;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-text-main);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}
+
+/* animation: scaleUp 1s ease-in-out;
+    transform-origin: center center; */
+
+@keyframes fromTop {
+    from {
+        transform: translateY(-100vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromLeft {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromRight {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes showUp {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
+/*===== BUTTONS =====*/
+
+.btn {
+    font-weight: 600;
+    border: 1px solid var(--clr-acc-main);
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--a-fs);
+    width: min(100%, 550px);
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: var(--clr-acc-main);
+    color: #fff;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    transition: .4s;
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+    animation: 1s ease-in-out .7s backwards fromBottom;
+
+}
+
+.btn:hover {
+    will-change: transform;
+}
+
+.btn:hover {
+    color: var(--clr-text-main);
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: transform 0.4s cubic-bezier(0.5,1.6,0.4,0.7);
+    transform-origin: 0, 0;
+    transform: scaleX(0);
+
+}
+
+.btn:hover:before {
+    transform: scaleX(1);
+}
+
+
+.btn:active {
+    scale: .97;
+}
+
+/*===== PROJECT CSS =====*/
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: #000;
+}
+
+.container {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 40px;
+    min-width: 430px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: scaleUp 1s ease-in-out;
+    transform-origin: center center;
+    position: relative;
+    overflow: hidden;
+}
+
+label {
+    animation: 1s ease-in-out .7s backwards fromLeft;
+}
+
+label:last-of-type {
+    animation: 1s ease-in-out .7s backwards fromRight;
+}
+
+.data form {
+    border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+}
+
+.cardNo {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.cardDate {
+    border-radius: 0 0 0 5px;
+}
+
+.cvc {
+    border-radius: 0 0 5px 0;
+}
+
+.cardDetails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.data svg {
+    margin-right: .3rem;
+}
+
+.cardNo > input[type=number] {
+    width: 100%;
+}
+
+input[type=number] {
+    border: none;
+    width: 50%;
+    max-width: 100px;
+    outline: none;
+    font-size: .75rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 2rem;
+}
+
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    margin-right: .3rem;
+    accent-color: var(--clr-acc-main);
+}
+
+input[type=radio] {
+    appearance: none;
+    min-width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--clr-acc-pri);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+
+input[type=radio]:checked {
+    background-color: var(--clr-acc-main);
+   
+}
+
+input[type=radio]::before {
+    position: absolute;
+    content: '\2713';
+    font-size: 1rem;
+    color: #fff;
+    transform: scale(0), translate(-50%, -50%); 
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transition: 0.3s all ease-in-out;
+}
+
+input[type=radio]:checked::before {
+    transform: scale(1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+label {
+    text-align: left;
+    border-radius: 5px;
+    display: flex;
+}
+
+h1 {
+    margin: .5rem 0;
+    font-size: 1.2rem;
+    font-family: "Merriweather", serif;
+    animation: 1s ease-in-out .3s backwards fromTop;
+}
+
+label:not(:last-of-type) {
+    margin-bottom: .5rem;
+    margin-top: 1.5rem;
+}
+
+label p {
+    width: 100%;
+}
+
+.info, .payTime {
+    margin-left: 1rem;
+}
+
+.info span {
+    display: block;
+}
+
+.info > p {
+    margin-bottom: .5rem;
+}
